@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerita Nentitu - Yayasan SBB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        bg-color: #fdfbf7;
+      } /* Krem sangat muda ala MedVi */
+      .bg-primary {
+        background-color: #064e3b;
+      }
+      .text-primary {
+        color: #064e3b;
+      }
+    </style>
+  </head>
+  <body class="bg-[#fdfbf7]">
+    <div
+      id="page-transition"
+      class="fixed inset-0 bg-primary z-[9999] transition-opacity duration-700 pointer-events-none opacity-0"
+    ></div>
+
+    <style>
+      /* Mencegah kedipan putih saat pindah halaman */
+      html {
+        background-color: #064e3b;
+      }
+    </style>
+    <nav
+      class="fixed top-0 w-full bg-primary text-white py-4 px-6 z-50 flex justify-between items-center shadow-md"
+    >
+      <div class="text-sm font-bold tracking-widest uppercase">
+        Yayasan Sembada Bakti Bersama
+      </div>
+
+      <button
+        id="menu-btn"
+        class="z-[70] flex flex-col space-y-1.5 focus:outline-none p-2 hover:bg-green-900 rounded-lg transition-all"
+      >
+        <span
+          id="strip-1"
+          class="w-7 h-0.5 bg-white transition-all duration-300"
+        ></span>
+        <span
+          id="strip-2"
+          class="w-7 h-0.5 bg-white transition-all duration-300"
+        ></span>
+      </button>
+
+      <div
+        id="menu-sidebar"
+        class="fixed top-0 right-0 h-full w-[280px] bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-24 px-8 space-y-6"
+      >
+        <a
+          href="index.html#beranda"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Tentang Kami</a
+        >
+        <a
+          href="index.html#pengurus"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Pengurus</a
+        >
+        <a
+          href="cerita-nentitu.html"
+          class="text-orange-500 text-lg font-bold border-b border-gray-100 pb-2 text-right italic"
+          >Cerita Nentitu</a
+        >
+        <a
+          href="index.html#sahabat-rindu"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Sahabat Rindu</a
+        >
+        <a
+          href="index.html#program"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Program Kami</a
+        >
+        <a
+          href="index.html#kontak"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Hubungi Kami</a
+        >
+
+        <div class="pt-10 text-center">
+          <p class="text-xs text-gray-400 italic">VIVA TAMBANG 92!</p>
+        </div>
+      </div>
+
+      <div
+        id="backdrop"
+        class="fixed inset-0 bg-black/20 hidden z-[55]"
+        onclick="closeMenu()"
+      ></div>
+    </nav>
+
+    <header class="pt-32 pb-16 px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-light text-primary mb-4 italic">
+        Cerita <span class="font-bold">Nentitu</span>
+      </h1>
+      <p class="text-gray-500 max-w-2xl mx-auto italic">
+        Kumpulan fragmen kenangan, tawa, dan perjalanan Alumni Tambang 92 yang
+        membentuk pondasi persaudaraan kita hari ini.
+      </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-24 space-y-20">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div
+          class="rounded-[40px] overflow-hidden shadow-xl aspect-video bg-gray-200"
+        >
+          <img
+            src="image/Ospek1.jpeg"
+            alt="Masa Kuliah"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+          />
+        </div>
+        <div class="space-y-4">
+          <span
+            class="text-orange-500 font-bold tracking-widest uppercase text-xs"
+            >Tahun 1992</span
+          >
+          <h2 class="text-3xl font-bold text-primary">Awal Mula Langkah</h2>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Di sinilah semua dimulai, di area orientasi kampus di tahun 1992,
+            masih muda, penuh harapan, dan tentu saja, penuh tawa."
+          </p>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4 md:order-1 order-2 text-right">
+          <span
+            class="text-orange-500 font-bold tracking-widest uppercase text-xs"
+            >Masa-masa akhir kuliah</span
+          >
+          <h2 class="text-3xl font-bold text-primary">
+            Selalu ada waktu untuk kumpul kumpul
+          </h2>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Bukan hanya soal ilmu pertambangan, tapi soal bagaimana berbagi dan
+            meracik indomie di tengah malam, sambil tertawa tentang bagaimana
+            strategi menghadapi ujian yang akan datang.
+          </p>
+        </div>
+        <div
+          class="rounded-[40px] overflow-hidden shadow-xl aspect-video bg-gray-200 md:order-2 order-1"
+        >
+          <img
+            src="image/kumpulkumpul1.jpeg"
+            alt="Lapangan"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-gray-100 py-12 border-t text-center text-primary font-medium"
+    >
+      <p>Yayasan Sembada Bakti Bersama &bull; Viva Tambang 92!</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const sidebar = document.getElementById("menu-sidebar");
+      const backdrop = document.getElementById("backdrop");
+      const strip1 = document.getElementById("strip-1");
+      const strip2 = document.getElementById("strip-2");
+
+      let isOpen = false;
+
+      function toggleMenu() {
+        isOpen = !isOpen;
+        if (isOpen) {
+          sidebar.classList.remove("translate-x-full");
+          backdrop.classList.remove("hidden");
+          strip1.classList.add("rotate-45", "translate-y-1");
+          strip2.classList.add("-rotate-45", "-translate-y-1");
+          strip1.classList.replace("bg-white", "bg-gray-800");
+          strip2.classList.replace("bg-white", "bg-gray-800");
+        } else {
+          closeMenu();
+        }
+      }
+
+      function closeMenu() {
+        isOpen = false;
+        sidebar.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+        strip1.classList.remove("rotate-45", "translate-y-1");
+        strip2.classList.remove("-rotate-45", "-translate-y-1");
+        strip1.classList.replace("bg-gray-800", "bg-white");
+        strip2.classList.replace("bg-gray-800", "bg-white");
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      // Script Menu Sidebar Anda yang sudah ada tetap di sini...
+      // (toggleMenu, closeMenu, dll)
+
+      // TAMBAHKAN SCRIPT TRANSISI DI BAWAHNYA:
+      (function () {
+        const overlay = document.getElementById("page-transition");
+
+        // 1. Saat Halaman Selesai Dimuat
+        window.addEventListener("load", () => {
+          // Halaman muncul perlahan dari warna hijau/krem
+          overlay.classList.replace("opacity-100", "opacity-0");
+        });
+
+        // 2. Logika Pindah Halaman
+        document.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+
+            // SYARAT TRANSISI:
+            // - Harus ada href
+            // - Bukan link internal (yang pakai tanda # di halaman yang sama)
+            // - Bukan link buka di tab baru (target="_blank")
+            const isInternalAnchor = href.startsWith("#");
+            const isExternal = this.target === "_blank";
+
+            if (
+              href &&
+              !isInternalAnchor &&
+              !isExternal &&
+              !href.startsWith("mailto:")
+            ) {
+              e.preventDefault();
+
+              // Tutup menu sidebar dulu jika sedang terbuka
+              if (typeof closeMenu === "function") closeMenu();
+
+              // Layar berubah jadi warna penuh (Fade Out)
+              overlay.classList.replace("opacity-0", "opacity-100");
+
+              setTimeout(() => {
+                window.location.href = href;
+              }, 600); // 0.6 detik durasi transisinya
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

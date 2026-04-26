@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta
+      name="description"
+      content="Yayasan Sembada Bakti Bersama - Wadah pengabdian dan kebersamaan Alumni Tambang 92."
+    />
+    <meta
+      name="keywords"
+      content="Yayasan Sembada Bakti Bersama, Tambang 92, Alumni Tambang"
+    />
+    <meta name="author" content="Tambang 92" />
+
+    <meta property="og:title" content="Yayasan Sembada Bakti Bersama" />
+    <meta
+      property="og:description"
+      content="Kebersamaan dalam Pengabdian, Manfaat serta Pendidikan."
+    />
+    <meta property="og:image" content="image/logoSBB.jpg" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yayasan Sembada Bakti Bersama - Viva Tambang 92!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      section {
+        scroll-margin-top: 40px; /* Sesuaikan dengan tinggi navbar Anda */
+      }
+      .bg-primary {
+        background-color: #064e3b;
+      } /* Hijau Tua Tambang */
+      .text-primary {
+        color: #064e3b;
+      }
+      .nav-link {
+        @apply hover:text-orange-400 transition-colors duration-200;
+      }
+      /* ... kode sebelumnya ... */
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 300s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      id="page-transition"
+      class="fixed inset-0 bg-primary z-[9999] transition-opacity duration-700 pointer-events-none opacity-0"
+    ></div>
+
+    <style>
+      /* Mencegah kedipan putih saat pindah halaman */
+      html {
+        background-color: #064e3b;
+      }
+    </style>
+    <nav
+      class="fixed top-0 w-full bg-primary text-white py-4 px-6 z-50 flex justify-between items-center shadow-md"
+    >
+      <div class="text-sm font-bold tracking-widest uppercase">
+        Yayasan Sembada Bakti Bersama
+      </div>
+
+      <button
+        id="menu-btn"
+        class="z-[70] flex flex-col space-y-1.5 focus:outline-none p-2 hover:bg-green-900 rounded-lg transition-all"
+      >
+        <span
+          id="strip-1"
+          class="w-7 h-0.5 bg-white transition-all duration-300"
+        ></span>
+        <span
+          id="strip-2"
+          class="w-7 h-0.5 bg-white transition-all duration-300"
+        ></span>
+      </button>
+
+      <div
+        id="menu-sidebar"
+        class="fixed top-0 right-0 h-full w-[280px] bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-24 px-8 space-y-6"
+      >
+        <a
+          href="#beranda"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Tentang Kami</a
+        >
+        <a
+          href="#pengurus"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Pengurus</a
+        >
+        <a
+          href="cerita-nentitu.html"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Cerita Nentitu</a
+        >
+
+        <a
+          href="#"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Sahabat Rindu</a
+        >
+        <a
+          href="#"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Program Kami</a
+        >
+        <a
+          href="#"
+          class="text-gray-800 text-lg font-medium hover:text-orange-500 transition-colors border-b border-gray-100 pb-2 text-right"
+          >Hubungi Kami</a
+        >
+
+        <div class="pt-10 text-center">
+          <p class="text-xs text-gray-400 italic">VIVA TAMBANG 92!</p>
+        </div>
+      </div>
+
+      <div
+        id="backdrop"
+        class="fixed inset-0 bg-black/20 hidden z-[55]"
+        onclick="closeMenu()"
+      ></div>
+    </nav>
+
+    <section
+      id="beranda"
+      class="min-h-screen pt-24 pb-16 px-6 flex flex-col items-center justify-center bg-primary text-white"
+    >
+      <div
+        class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <div
+          class="bg-white p-4 rounded-[50px] shadow-2xl flex items-center justify-center aspect-square"
+        >
+          <div class="text-primary font-bold text-center italic">
+            <img
+              src="image/logoSBB.jpg"
+              alt="Logo Yayasan Sembada Bakti Bersama"
+              class="max-w-[100%] max-h-[100%] w-auto h-auto transition-all duration-700"
+            />
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <h1 class="text-3xl md:text-5xl font-light leading-tight">
+            Tahapan membangun <span class="font-bold">MASA DEPAN</span>, <br />
+            <span class="border-b-4 border-orange-500">Kebersamaan</span> dalam
+            Pengabdian, Manfaat serta Pendidikan.
+          </h1>
+          <p class="text-2xl font-bold tracking-widest text-orange-400">
+            VIVA TAMBANG 92!
+          </p>
+
+          <div
+            class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20"
+          >
+            <p class="text-sm leading-relaxed text-justify opacity-90 italic">
+              Logo Yayasan Sembada Bakti Bersama terdapat elemen lapisan geologi
+              yang menggambarkan akar keilmuan para pendiri yayasan dari dunia
+              pertambangan. Lapisan geologi di bawah figur manusia dan buku
+              terbuka melambangkan kedalaman ilmu, fondasi kuat, dan proses
+              bertahap dalam membangun masa depan. Warna oranye dan coklat
+              digunakan untuk merepresentasikan tanah, batuan, dan semangat
+              pertambangan. Figur manusia tetap melambangkan kebersamaan dan
+              pengabdian.- Warna hijau muda dan hijau tua digunakan untuk
+              merepresentasikan bertumbuh dan berkembang, keasrian dan
+              pelestarian, terus memberi manfaat kehidupan. Simbol buku terbuka
+              sebagai simbol pendidikan tetap menjadi pusat dari filosofi
+              yayasan.Logo ini kini tidak hanya mencerminkan nilai sosial dan
+              pendidikan, tapi juga menghormati latar belakang keilmuan para
+              pendirinya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="pengurus"
+      class="py-6 px-6 transition-colors duration-500 bg-white"
+    >
+      <div
+        class="w-full overflow-hidden bg-white border-y border-gray-100 py-4 mb-2"
+      >
+        <div id="marquee-content" class="animate-marquee items-center"></div>
+      </div>
+      <div class="max-w-7xl mx-auto text-center">
+        <div class="mb-3">
+          <h2
+            id="pengurus-title"
+            class="text-4xl font-bold text-primary italic transition-colors duration-500"
+          >
+            Pengurus inti
+          </h2>
+        </div>
+
+        <div
+          id="card-pengurus"
+          class="relative mx-auto w-full sm:w-3/4 lg:w-2/3 p-2 rounded-[45px] transition-all duration-500"
+        >
+          <div
+            id="frame-container"
+            class="aspect-[4/3] bg-white rounded-[40px] overflow-hidden shadow-2xl border-4 border-transparent transition-all duration-500 flex flex-col items-center justify-center p-8"
+          >
+            <img
+              id="pengurus-frame"
+              src="image/pengurus-group-11.jpg"
+              alt="Pengurus"
+              class="max-w-[100%] max-h-[100%] w-auto h-auto transition-all duration-700 grayscale mb-4 opacity-100"
+            />
+
+            <p
+              id="names-label"
+              class="text-gray-400 font-bold italic text-lg md:text-base transition-colors duration-500 opacity-100"
+            >
+              Rika, Catur, Anto dan Yusi
+            </p>
+          </div>
+
+          <div class="mt-4 flex flex-col items-center space-y-4">
+            <div class="flex items-center justify-center space-x-4">
+              <button
+                id="toggle-photo"
+                class="px-8 py-3 rounded-full bg-primary text-white shadow-lg hover:scale-105 transition-all font-bold tracking-wide"
+              >
+                Versi Formal Kondangan
+              </button>
+            </div>
+
+            <p id="instruction-text" class="text-sm text-gray-500 italic">
+              Klik untuk melihat transformasi ala James Bond 007
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-gray-100 py-12 border-t text-center text-primary font-medium"
+    >
+      <p>Yayasan Sembada Bakti Bersama &bull; Viva Tambang 92!</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const sidebar = document.getElementById("menu-sidebar");
+      const backdrop = document.getElementById("backdrop");
+      const strip1 = document.getElementById("strip-1");
+      const strip2 = document.getElementById("strip-2");
+
+      let isOpen = false;
+
+      function toggleMenu() {
+        isOpen = !isOpen;
+        if (isOpen) {
+          sidebar.classList.remove("translate-x-full");
+          backdrop.classList.remove("hidden");
+          // Efek animasi tombol jadi silang (opsional, keren buat stealth)
+          strip1.classList.add("rotate-45", "translate-y-1");
+          strip2.classList.add("-rotate-45", "-translate-y-1");
+          // Ganti warna strip jadi hitam/gelap agar terlihat di atas menu putih
+          strip1.classList.replace("bg-white", "bg-gray-800");
+          strip2.classList.replace("bg-white", "bg-gray-800");
+        } else {
+          closeMenu();
+        }
+      }
+
+      function closeMenu() {
+        isOpen = false;
+        sidebar.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+        strip1.classList.remove("rotate-45", "translate-y-1");
+        strip2.classList.remove("-rotate-45", "-translate-y-1");
+        strip1.classList.replace("bg-gray-800", "bg-white");
+        strip2.classList.replace("bg-gray-800", "bg-white");
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      // Menutup menu jika link diklik
+      const links = sidebar.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      (function () {
+        // photos dideklarasikan nanti (hindari duplikat)
+
+        // 1. DAFTAR NAMA ALUMNI (Isi sampai 144 nama)
+        const alumniNames = [
+          "Akhmad Aris Tantowi",
+          "Zjainal Mustofa",
+          "Soni Triyanto",
+          "Heru Setijo Mudji S",
+          "Yudi Harjanto",
+          "Feri Budiharto",
+          "Abdi Sari Said",
+          "Agus Romdoni Sapto Nugroho",
+          "Bambang Sumarsono",
+          "Triwijanto Budi Mulyawan",
+          "Nanang Lukis Lodaya",
+          "Sudaryono",
+          "Yudi Ernadi",
+          "Ignatius Rinaldi Agung T.",
+          "Mochammad Ali Arifin",
+          "Nyoman Anom Atmanadi",
+          "Sofyan Nugroho",
+          "Oki Nugroho Budi Kusumo",
+          "Tony Cahyawanto",
+          "Hary Wibowo",
+          "Paulus Hery P.",
+          "Agung Sukma Ardianto",
+          "Wahyu Purbo Winarno",
+          "Joko Sulistyo",
+          "Azizuddin Amin",
+          "Sutrisno",
+          "Titik Widiyati",
+          "Weddy Yanuar",
+          "Robertus Agung Cahyono",
+          "Arif Nurwaskito",
+          "Faxafrina Eka Wijayanti",
+          "Cece Gunawan",
+          "Jamaluddin Al Farruq",
+          "Danny Kurniawan",
+          "Agus Vietnaryanto",
+          "Daru Hardiyanto",
+          "Iwan Sumantri",
+          "Deddy Darmawan",
+          "M. Andi Haryana Nurkusuma",
+          "Bambang Siswo Usodo",
+          "Pudji Supraningsih",
+          "Arlindoly Siregar",
+          "Randy Andrian KC",
+          "Endro Laksito",
+          "Lukky Lesterly",
+          "Pahala Syabekti",
+          "Ahmad Zaini Miftah",
+          "Heri Istanto",
+          "Moh. Nursjahid Sugeng Edi Tjahjono (*)",
+          "Riza Okta Marlek",
+          "Asikin",
+          "Ashar Setyandaru",
+          "Heru Purnomo",
+          "Bagus Satrianto",
+          "Wahyu Triantono",
+          "Wahyudi",
+          "Catur Gunadi",
+          "Oktar Ega Pasa",
+          "Heru Susanto",
+          "Agus Subiyantoro",
+          "Teddy Rumekso",
+          "Sumardi",
+          "Inovie Dri Astuti (*)",
+          "Bambang Siswanto",
+          "Arif Susanto",
+          "Hendro Wibowo",
+          "Juli Suprijanto",
+          "Laksana Muhammad",
+          "Dwi Dono Rokhaman",
+          "Anang Marjupri",
+          "Yudi Aryanto",
+          "Budiono",
+          "Desmart Martin S. Siahaan",
+          "I Gede Widian Kumara",
+          "Albertus Dodhy Agung P.",
+          "Rocky Lumbanradja",
+          "Osea Wirastopo",
+          "Nur Wiryabudi",
+          "Bambang Riyanto",
+          "Bambang Suprayitno",
+          "Agustinus Setyo Nugroho",
+          "Elhimne Jelita Siahaan",
+          "Imam Pramono",
+          "Sony Tjahyo Suryanto",
+          "Rika Ernawati",
+          "Jerwin Andrianto",
+          "Jefry Aldi",
+          "Syauqie Adhi Purwandito",
+          "Antonius Solihin",
+          "Anak Agung Gede Yudhantara",
+          "Bambang Hendrawan",
+          "Djoko Riyanto",
+          "Muhammad Usran",
+          "Tanto Afrianto S.",
+          "Sotarguga Silaban",
+          "Hery Kuncoro",
+          "Danu Lupita",
+          "July Purwanto",
+          "Erwin Hendrik Sinaga",
+          "Imam Setiadi",
+          "Yuri Hermawan Prasetyo",
+          "Izrulsyah Effendy",
+          "Kahananto",
+          "Ansyari",
+          "Eko Suryanto Aziz Kuntoro",
+          "Agus Nur Suryahadi",
+          "Teguh Hartanto",
+          "Eddy Susanto",
+          "Agung Sabdono",
+          "Rafli",
+          "Andi Prasetyo",
+          "Danny Satria (*)",
+          "Yusuf Hasim",
+          "A. Probo Sutantyo",
+          "Irwan Yuswanto",
+          "Asep Setiyadi",
+          "Dedy Mahendrawan",
+          "Deden Iwan Hendriawan (*)",
+          "Riza Zainuriska Sani",
+          "Adi Satrio",
+          "Eddy Irwan",
+          "Sumaryanto (*)",
+          "Endang Andriyani",
+          "Daru Sumirat",
+          "Susatio Rian Triarno",
+          "Evarestus Agung Prasetyo",
+          "Sofyar Santoso",
+          "Arkadius Sutra Tarigan",
+          "Said Faisal",
+          "Agus Susilo",
+          "Nurcahya Putra R.",
+          "Robianto Robikurniawan (*)",
+          "Habinsaran Tambunan",
+          "Hendra Yuliasta Sebayang",
+          "Mashudi",
+          "Rion Karneji",
+          "Romi Hidayat",
+          "Teuku Istian Zola",
+          "Widiyatno",
+          "Apriyanto Eko Pramoko (*)",
+          "Ruswito Surendro",
+          "Tusam",
+          "Arief Budianto",
+          "Kapojos Pauldi",
+          "Kunto Wijoyo",
+          "Karno Wibowo",
+          "Tarsisius Birat Setyoko",
+          "Mochamad Hendi Setiawan",
+          "Iwan Setiawan",
+          "Daniel Zakky",
+          "Endro Suprojo",
+          "Andri Halasan Pasaribu (*)",
+          "Rudi Setyawan",
+          "Teguh Kurniawan",
+          "Makmun Abdullah",
+          "Kristanto Atmojo",
+          "Wiwit Setiyawan",
+          "Nahes Jhon Richard Aritonang",
+          "Khristiawan Sentono",
+          "Ahmad Risdianto",
+          "Agus Arifianto",
+          "Leader DS. Daeli",
+          "Ismaharozi (*)",
+          "M. Rizapahlevi Purba",
+          "Dhodi Vittorio",
+          "Budhi Haryono",
+          "Aspiansyah",
+        ];
+
+        const marqueeContainer = document.getElementById("marquee-content");
+
+        function createNameRow(names) {
+          const row = document.createElement("div");
+          row.className =
+            "flex items-center space-x-12 px-6 text-xs md:text-sm font-semibold tracking-[0.3em] text-gray-400 uppercase italic whitespace-nowrap";
+
+          names.forEach((name) => {
+            const span = document.createElement("span");
+            span.innerText = name;
+            const separator = document.createElement("span");
+            separator.innerHTML = "&bull;";
+            separator.className = "text-orange-500 mx-2";
+            row.appendChild(span);
+            row.appendChild(separator);
+          });
+          return row;
+        }
+
+        // Injeksi nama ke marquee (duplikat untuk loop seamless)
+        marqueeContainer.appendChild(createNameRow(alumniNames));
+        marqueeContainer.appendChild(createNameRow(alumniNames));
+
+        // 2. LOGIKA TRANSISI PENGURUS
+        const photos = [
+          "image/pengurus-group-11.jpg",
+          "image/pengurus-group-12.jpg",
+        ];
+        const names = [
+          "Rika, Catur, Anto dan Yusi",
+          "Special Board Member: Catur, Rika, Anto & Yusi",
+        ];
+
+        const frame = document.getElementById("pengurus-frame");
+        const nameLabel = document.getElementById("names-label");
+        const toggleBtn = document.getElementById("toggle-photo");
+        const instructiontext = document.getElementById("instruction-text");
+
+        let index = 0;
+        let animating = false;
+
+        function showPhoto(i) {
+          if (!frame) return;
+          animating = true;
+
+          frame.classList.replace("opacity-100", "opacity-0");
+          nameLabel.classList.replace("opacity-100", "opacity-0");
+
+          setTimeout(() => {
+            frame.src = photos[i];
+            nameLabel.innerText = names[i];
+
+            if (i === 1) {
+              // MODE BOND
+              frame.classList.remove("grayscale");
+              toggleBtn.innerText = "Versi Natural";
+              instructiontext.innerText =
+                "Klik untuk kembali ke mode natural sehari-hari";
+              toggleBtn.classList.replace("bg-primary", "bg-amber-600");
+              // Update warna label nama ke Emas
+              nameLabel.classList.replace("text-gray-400", "text-amber-500");
+            } else {
+              // MODE NATURAL
+              frame.classList.add("grayscale");
+              toggleBtn.innerText = "Versi Formal Kondangan";
+              instructiontext.innerText =
+                "Klik untuk melihat transformasi ala James Bond 007";
+              toggleBtn.classList.replace("bg-amber-600", "bg-primary");
+              // Kembalikan warna label nama ke Abu-abu
+              nameLabel.classList.replace("text-amber-500", "text-gray-400");
+            }
+
+            frame.classList.replace("opacity-0", "opacity-100");
+            nameLabel.classList.replace("opacity-0", "opacity-100");
+
+            setTimeout(() => {
+              animating = false;
+            }, 300);
+          }, 250);
+        }
+
+        toggleBtn.addEventListener("click", () => {
+          if (animating) return;
+          index = (index + 1) % photos.length;
+          showPhoto(index);
+        });
+      })();
+
+      // Script Menu Sidebar Anda yang sudah ada tetap di sini...
+      // (toggleMenu, closeMenu, dll)
+
+      // TAMBAHKAN SCRIPT TRANSISI DI BAWAHNYA:
+      (function () {
+        const overlay = document.getElementById("page-transition");
+
+        // 1. Saat Halaman Selesai Dimuat
+        window.addEventListener("load", () => {
+          // Halaman muncul perlahan dari warna hijau/krem
+          overlay.classList.replace("opacity-100", "opacity-0");
+        });
+
+        // 2. Logika Pindah Halaman
+        document.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+
+            // SYARAT TRANSISI:
+            // - Harus ada href
+            // - Bukan link internal (yang pakai tanda # di halaman yang sama)
+            // - Bukan link buka di tab baru (target="_blank")
+            const isInternalAnchor = href.startsWith("#");
+            const isExternal = this.target === "_blank";
+
+            if (
+              href &&
+              !isInternalAnchor &&
+              !isExternal &&
+              !href.startsWith("mailto:")
+            ) {
+              e.preventDefault();
+
+              // Tutup menu sidebar dulu jika sedang terbuka
+              if (typeof closeMenu === "function") closeMenu();
+
+              // Layar berubah jadi warna penuh (Fade Out)
+              overlay.classList.replace("opacity-0", "opacity-100");
+
+              setTimeout(() => {
+                window.location.href = href;
+              }, 600); // 0.6 detik durasi transisinya
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
